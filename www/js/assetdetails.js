@@ -63,7 +63,7 @@ function displayAssetDetails(data) {
 
 
 function launchBrowser() {
-            window.plugins.childBrowser.openExternal(Asset.Link1URL)
+            window.plugins.childBrowser.openExternal('http://www.google.com')
         }
 	
 
