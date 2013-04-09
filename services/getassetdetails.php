@@ -1,10 +1,8 @@
 <?php
 include 'config.php';
 
-$sql = "select e.id, e.firstName, e.lastName, e.managerId, e.title, e.department, e.city, e.officePhone, e.cellPhone, " .
-		"e.email, e.picture, m.firstName managerFirstName, m.lastName managerLastName, count(r.id) reportCount " . 
-		"from employee e left join employee r on r.managerId = e.id left join employee m on e.managerId = m.id " .
-		"where e.id=:id group by e.lastName order by e.lastName, e.firstName";
+$sql = "select * from assethyperlinks as e  " .
+	   "where e.id=:id ";
 
 try {
 	$dbh = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);	
@@ -12,9 +10,9 @@ try {
 	$stmt = $dbh->prepare($sql);  
 	$stmt->bindParam("id", $_GET['id']);
 	$stmt->execute();
-	$employee = $stmt->fetchObject();  
+	$Asset = $stmt->fetchObject();  
 	$dbh = null;
-	echo '{"item":'. json_encode($employee) .'}'; 
+	echo '{"item":'. json_encode($Asset) .'}'; 
 } catch(PDOException $e) {
 	echo '{"error":{"text":'. $e->getMessage() .'}}'; 
 }

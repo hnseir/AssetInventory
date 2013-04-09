@@ -1,9 +1,9 @@
 <?php
 include 'config.php';
 
-$sql = "select e.ProjectName, e.ElementID, e.ElementType, e.ElementFamily " . 
-		"from assethyperlinks " .
-		"group by e.ProjectName order by e.ElementType";
+$sql = "select e.id, e.ProjectName, e.ElementID, e.ElementType, e.ElementFamily " . 
+		"from assethyperlinks AS e " .
+		"order by e.ProjectName";
 
 try {
 	$dbh = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);	
