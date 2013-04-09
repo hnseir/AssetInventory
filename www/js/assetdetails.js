@@ -13,8 +13,13 @@ function displayAssetDetails(data) {
 	$('#elementtype').html('<b>Type:</b> ' + Asset.ElementType);
 	$('#elementid').html('<b>Element ID:</b> ' + Asset.ElementID);
 	if (Asset.Link1Name) {
-		$('#actionList').append('<li><a href="' + Asset.Link1URL + '" target="_blank"><h3>'+Asset.Link1Name+'</h3>' +
+		$('#actionList').append('<li><a onClick="launchBrowser()" href="#"><h3>'+Asset.Link1Name+'</h3>' +
 				'<p>' + Asset.Link1URL + '</p></a></li>');
+	}
+	
+	if (Asset.Link2Name) {
+		$('#actionList').append('<li><a href="' + Asset.Link2URL + '" target="_blank"><h3>'+Asset.Link2Name+'</h3>' +
+				'<p>' + Asset.Link2URL + '</p></a></li>');
 	}
 	if (Asset.Link2Name) {
 		$('#actionList').append('<li><a href="' + Asset.Link2URL + '" target="_blank"><h3>'+Asset.Link2Name+'</h3>' +
@@ -55,6 +60,13 @@ function displayAssetDetails(data) {
 	$('#actionList').listview('refresh');
 	
 }
+
+
+function launchBrowser() {
+            window.plugins.childBrowser.openExternal(Asset.Link1URL)
+        }
+	
+
 
 function getUrlVars() {
     var vars = [], hash;
