@@ -12,9 +12,10 @@ function displayAssetDetails(data) {
 	$('#elementfamily').html('<b>Family:</b> ' + Asset.ElementFamily);
 	$('#elementtype').html('<b>Type:</b> ' + Asset.ElementType);
 	$('#elementid').html('<b>Element ID:</b> ' + Asset.ElementID);
+	
 	if (Asset.Link1Name) {
-		$('#actionList').append('<li><a onClick="launchBrowser(' + Asset.Link1URL + ')" href="#"><h3>'+Asset.Link1Name+'</h3>' +
-				'<p>' + Asset.Link1URL + '</p></a></li>');
+		$('#actionList').append('<li><a onClick="'+window.plugins.childBrowser.openExternal('http://www.google.com/search?q=phonegap')+'" href="#"><h3>'
+		 + Asset.Link1Name+'</h3>' + '<p>' + Asset.Link1URL + '</p></a></li>');
 	}
 	
 	if (Asset.Link2Name) {
@@ -60,12 +61,6 @@ function displayAssetDetails(data) {
 	$('#actionList').listview('refresh');
 	
 }
-
-
-function launchBrowser(assetlink) {
-            window.plugins.childBrowser.openExternal(assetlink)
-        }
-	
 
 
 function getUrlVars() {
