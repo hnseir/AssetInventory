@@ -13,7 +13,7 @@ function displayAssetDetails(data) {
 	$('#elementtype').html('<b>Type:</b> ' + Asset.ElementType);
 	$('#elementid').html('<b>Element ID:</b> ' + Asset.ElementID);
 	if (Asset.Link1Name) {
-		$('#actionList').append('<li><a onClick="launchBrowser()" href="#"><h3>'+Asset.Link1Name+'</h3>' +
+		$('#actionList').append('<li><a onClick="launchBrowser(' + Asset.Link1URL + ')" href="#"><h3>'+Asset.Link1Name+'</h3>' +
 				'<p>' + Asset.Link1URL + '</p></a></li>');
 	}
 	
@@ -62,8 +62,8 @@ function displayAssetDetails(data) {
 }
 
 
-function launchBrowser() {
-            window.plugins.childBrowser.openExternal('http://www.google.com')
+function launchBrowser(assetlink) {
+            window.plugins.childBrowser.openExternal(assetlink)
         }
 	
 
