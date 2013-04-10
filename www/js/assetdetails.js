@@ -14,7 +14,7 @@ function displayAssetDetails(data) {
 	$('#elementid').html('<b>Element ID:</b> ' + Asset.ElementID);
 	
 	if (Asset.Link1Name) {
-		$('#actionList').append('<li><a onClick="'+window.plugins.childBrowser.openExternal('http://www.google.com/search?q=phonegap')+'" href="#"><h3>'
+		$('#actionList').append('<li><a onClick="'+window.plugins.childBrowser.openExternal(Asset.Link1URL.text)+'" href="#"><h3>'
 		 + Asset.Link1Name+'</h3>' + '<p>' + Asset.Link1URL + '</p></a></li>');
 	}
 	
