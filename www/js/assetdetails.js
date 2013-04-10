@@ -14,10 +14,9 @@ function displayAssetDetails(data) {
 	$('#elementid').html('<b>Element ID:</b> ' + Asset.ElementID);
 	
 	if (Asset.Link1Name) {
-		$('#actionList').append('<li><a onClick="'+window.plugins.childBrowser.openExternal(Asset.Link1URL)+'" href="#"><h3>'
-		 + Asset.Link1Name+'</h3>' + '<p>' + Asset.Link1URL + '</p></a></li>');
+		$('#actionList').append('<li><a href="' + Asset.Link1URL + '" target="_blank"><h3>'+Asset.Link1Name+'</h3>' +
+				'<p>' + Asset.Link1URL + '</p></a></li>');
 	}
-	
 	if (Asset.Link2Name) {
 		$('#actionList').append('<li><a href="' + Asset.Link2URL + '" target="_blank"><h3>'+Asset.Link2Name+'</h3>' +
 				'<p>' + Asset.Link2URL + '</p></a></li>');
@@ -58,6 +57,31 @@ function displayAssetDetails(data) {
 		$('#actionList').append('<li><a href="' + Asset.Link10URL + '" target="_blank"><h3>'+Asset.Link10Name+'</h3>' +
 				'<p>' + Asset.Link10URL + '</p></a></li>');
 	}
+	
+	if (Asset.Link1Name) {
+		$('#actionList').append('<li><a href="#" onClick="'+ window.plugins.childBrowser.showWebPage(Asset.Link1URL)+'">
+		<h3>'+ Asset.Link1Name+'</h3>' + '<p>' + Asset.Link1URL + '</p></a></li>');
+	}
+	if (Asset.Link2Name) {
+		$('#actionList').append('<li><a href="#" onClick="'+ window.plugins.childBrowser.showWebPage(Asset.Link2URL)+'">
+		<h3>'+ Asset.Link2Name+'</h3>' + '<p>' + Asset.Link2URL + '</p></a></li>');
+	}
+	if (Asset.Link3Name) {
+		$('#actionList').append('<li><a href="#" onClick="'+ window.plugins.childBrowser.showWebPage(Asset.Link3URL)+'">
+		<h3>'+ Asset.Link3Name+'</h3>' + '<p>' + Asset.Link3URL + '</p></a></li>');
+	}
+	if (Asset.Link4Name) {
+		$('#actionList').append('<li><a href="#" onClick="'+ window.plugins.childBrowser.showWebPage(Asset.Link4URL)+'">
+		<h3>'+ Asset.Link4Name+'</h3>' + '<p>' + Asset.Link4URL + '</p></a></li>');
+	}
+	if (Asset.Link5Name) {
+		$('#actionList').append('<li><a href="#" onClick="'+ window.plugins.childBrowser.showWebPage(Asset.Link5URL)+'">
+		<h3>'+ Asset.Link5Name+'</h3>' + '<p>' + Asset.Link5URL + '</p></a></li>');
+	}
+	
+	
+	
+	
 	$('#actionList').listview('refresh');
 	
 }
