@@ -51,13 +51,17 @@ function displayAssetDetails(data) {
 
 function Addlink(linkname,linkurl){
 	$('#actionList').append('<li><a href=""><h3>'+ linkname+'</h3>' +'<p>' + linkurl + '</p></a></li>').find('a:last').click(function(event){
-			event.preventDefault()
-			
-		if ((linkurl.indexOf("doc")!=-1 || linkurl.indexOf("xls")!=-1 || linkurl.indexOf("rtf")!=-1 || linkurl.indexOf("ppt")!=-1 || linkurl.indexOf("pps")!=-1 || linkurl.indexOf("pdf")!=-1) ){
-				window.plugins.childBrowser.showWebPage(encodeURI('http://docs.google.com/viewer?url=' + linkurl), { showNavigationBar: true, showLocationBar: true, showAddressBar: true })			 
+			event.preventDefault();			
+		if ((linkurl.indexOf("doc")!=-1 || linkurl.indexOf("xls")!=-1 || linkurl.indexOf("rtf")!=-1 ||
+		 linkurl.indexOf("ppt")!=-1 || linkurl.indexOf("pps")!=-1 || linkurl.indexOf("pdf")!=-1) ){
+				window.plugins.childBrowser.showWebPage(encodeURI('http://docs.google.com/viewer?url=' + linkurl),
+				 { showNavigationBar: true, showLocationBar: true, showAddressBar: true });			 
+			}
+			else if (linkurl.indexOf("@")!=-1){
+				window.plugins.childBrowser.showWebPage('mailto:'+linkurl);
 			}
 		 	else{
-				window.plugins.childBrowser.showWebPage(linkurl, { showNavigationBar: true, showLocationBar: true, showAddressBar: true })
+				window.plugins.childBrowser.showWebPage(linkurl, { showNavigationBar: true, showLocationBar: true, showAddressBar: true });
 			}
 			});
 }
