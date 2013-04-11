@@ -21,10 +21,6 @@ function displayAssetDetails(data) {
 		$('#actionList').append('<li><a href="' + Asset.Link2URL + '" target="_blank"><h3>'+Asset.Link2Name+'</h3>' +
 				'<p>' + Asset.Link2URL + '</p></a></li>');
 	}
-	if (Asset.Link2Name) {
-		$('#actionList').append('<li><a href="' + Asset.Link2URL + '" target="_blank"><h3>'+Asset.Link2Name+'</h3>' +
-				'<p>' + Asset.Link2URL + '</p></a></li>');
-	}
 	if (Asset.Link3Name) {
 		$('#actionList').append('<li><a href="' + Asset.Link3URL + '" target="_blank"><h3>'+Asset.Link3Name+'</h3>' +
 				'<p>' + Asset.Link3URL + '</p></a></li>');
@@ -59,8 +55,10 @@ function displayAssetDetails(data) {
 	}
 	
 	if (Asset.Link1Name) {
-		$('#actionList').append('<li><a href="#" onClick="'+ openlink(Asset.Link1URL)+'"><h3>'+ Asset.Link1Name+'</h3>' +
-		 '<p>' + Asset.Link1URL + '</p></a></li>');
+		$('#actionList').append('<li><a href="#"><h3>'+ Asset.Link1Name+'</h3>' +
+		 '<p>' + Asset.Link1URL + '</p></a></li>').click(function(){
+		 	window.plugins.childBrowser.showWebPage(Asset.Link1URL)
+			});
 	}
 	
 	
