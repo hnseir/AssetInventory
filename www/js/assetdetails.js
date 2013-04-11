@@ -55,13 +55,13 @@ function Addlink(linkname,linkurl){
 		if ((linkurl.indexOf("doc")!=-1 || linkurl.indexOf("xls")!=-1 || linkurl.indexOf("rtf")!=-1 ||
 		 linkurl.indexOf("ppt")!=-1 || linkurl.indexOf("pps")!=-1 || linkurl.indexOf("pdf")!=-1) ){
 				window.plugins.childBrowser.showWebPage(encodeURI('http://docs.google.com/viewer?url=' + linkurl),
-				 { showNavigationBar: true, showLocationBar: true, showAddressBar: true });			 
+				 { showNavigationBar: true, showLocationBar: true, showAddress: true });			 
 			}
 			else if (linkurl.indexOf("@")!=-1){
 				window.location.href = 'mailto:'+linkurl;
 			}
 		 	else{
-				window.plugins.childBrowser.showWebPage(linkurl, { showNavigationBar: true, showLocationBar: true, showAddressBar: true });
+				window.plugins.childBrowser.showWebPage(linkurl, { showNavigationBar: true, showLocationBar: true, showAddress: true });
 			}
 			});
 }
