@@ -17,7 +17,13 @@ function displayAssetDetails(data) {
 	if (Asset.Link1Name) {
 		$('#actionList').append('<li><a href=""><h3>'+ Asset.Link1Name+'</h3>' +'<p>' + Asset.Link1URL + '</p></a></li>').find('a:last').click(function(event){
 			event.preventDefault()
-		 	window.plugins.childBrowser.showWebPage(encodeURI('http://docs.google.com/viewer?url=' + Asset.Link1URL ), { showNavigationBar: true, showLocationBar: true, showAddressBar: true })
+			var l1 = String(Asset.Link1URL)
+		if ((l1.indexOf("doc") || l1.indexOf("xls") || l1.indexOf("rtf") || l1.indexOf("ppt") || l1.indexOf("pps") || l1.indexOf("pdf")) !=-1){
+				window.plugins.childBrowser.showWebPage(encodeURI('http://docs.google.com/viewer?url=' + l1), { showNavigationBar: true, showLocationBar: true, showAddressBar: true })			 
+			}
+		 	else{
+				window.plugins.childBrowser.showWebPage(l1, { showNavigationBar: true, showLocationBar: true, showAddressBar: true })
+			}
 			});
 	}
 	if (Asset.Link2Name) {
@@ -79,8 +85,17 @@ function displayAssetDetails(data) {
 	
 }
 
-function openlink(linkurl){
-	window.plugins.childBrowser.showWebPage(linkurl)
+function Addlink(linkname,linkurl){
+	$('#actionList').append('<li><a href=""><h3>'+ linkname+'</h3>' +'<p>' + linkurl + '</p></a></li>').find('a:last').click(function(event){
+			event.preventDefault()
+			
+		if ((linkurl.indexOf("doc") || linkurl.indexOf("xls") || linkurl.indexOf("rtf") || linkurl.indexOf("ppt") || linkurl.indexOf("pps") || linkurl.indexOf("pdf")) !=-1){
+				window.plugins.childBrowser.showWebPage(encodeURI('http://docs.google.com/viewer?url=' + linkurl), { showNavigationBar: true, showLocationBar: true, showAddressBar: true })			 
+			}
+		 	else{
+				window.plugins.childBrowser.showWebPage(linkurl, { showNavigationBar: true, showLocationBar: true, showAddressBar: true })
+			}
+			});
 }
 
 function getUrlVars() {
