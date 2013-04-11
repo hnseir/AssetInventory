@@ -13,54 +13,57 @@ function displayAssetDetails(data) {
 	$('#elementtype').html('<b>Type:</b> ' + Asset.ElementType);
 	$('#elementid').html('<b>Element ID:</b> ' + Asset.ElementID);
 	
+
 	if (Asset.Link1Name) {
-		$('#actionList').append('<li><a href="' + Asset.Link1URL + '" target="_blank"><h3>'+Asset.Link1Name+'</h3>' +
-				'<p>' + Asset.Link1URL + '</p></a></li>');
-	}
-	if (Asset.Link2Name) {
-		$('#actionList').append('<li><a href="' + Asset.Link2URL + '" target="_blank"><h3>'+Asset.Link2Name+'</h3>' +
-				'<p>' + Asset.Link2URL + '</p></a></li>');
-	}
-	if (Asset.Link3Name) {
-		$('#actionList').append('<li><a href="' + Asset.Link3URL + '" target="_blank"><h3>'+Asset.Link3Name+'</h3>' +
-				'<p>' + Asset.Link3URL + '</p></a></li>');
-	}
-	if (Asset.Link4Name) {
-		$('#actionList').append('<li><a href="' + Asset.Link4URL + '" target="_blank"><h3>'+Asset.Link4Name+'</h3>' +
-				'<p>' + Asset.Link4URL + '</p></a></li>');
-	}
-	if (Asset.Link5Name) {
-		$('#actionList').append('<li><a href="' + Asset.Link5URL + '" target="_blank"><h3>'+Asset.Link5Name+'</h3>' +
-				'<p>' + Asset.Link5URL + '</p></a></li>');
-	}
-	if (Asset.Link6Name) {
-		$('#actionList').append('<li><a href="' + Asset.Link6URL + '" target="_blank"><h3>'+Asset.Link6Name+'</h3>' +
-				'<p>' + Asset.Link6URL + '</p></a></li>');
-	}
-	if (Asset.Link7Name) {
-		$('#actionList').append('<li><a href="' + Asset.Link7URL + '" target="_blank"><h3>'+Asset.Link7Name+'</h3>' +
-				'<p>' + Asset.Link7URL + '</p></a></li>');
-	}
-	if (Asset.Link8Name) {
-		$('#actionList').append('<li><a href="' + Asset.Link8URL + '" target="_blank"><h3>'+Asset.Link8Name+'</h3>' +
-				'<p>' + Asset.Link8URL + '</p></a></li>');
-	}
-	if (Asset.Link9Name) {
-		$('#actionList').append('<li><a href="' + Asset.Link9URL + '" target="_blank"><h3>'+Asset.Link9Name+'</h3>' +
-				'<p>' + Asset.Link9URL + '</p></a></li>');
-	}
-	if (Asset.Link10Name) {
-		$('#actionList').append('<li><a href="' + Asset.Link10URL + '" target="_blank"><h3>'+Asset.Link10Name+'</h3>' +
-				'<p>' + Asset.Link10URL + '</p></a></li>');
-	}
-	
-	if (Asset.Link1Name) {
-		$('#actionList').append('<li><a href="#"><h3>'+ Asset.Link1Name+'</h3>' +
-		 '<p>' + Asset.Link1URL + '</p></a></li>').click(function(){
+		$('#actionList').append('<li><a href="#"><h3>'+ Asset.Link1Name+'</h3>' +'<p>' + Asset.Link1URL + '</p></a></li>').click(function(){
 		 	window.plugins.childBrowser.showWebPage(Asset.Link1URL)
 			});
 	}
-	
+	if (Asset.Link2Name) {
+		$('#actionList').append('<li><a href="#"><h3>'+ Asset.Link2Name+'</h3>' +'<p>' + Asset.Link2URL + '</p></a></li>').click(function(){
+		 	window.plugins.childBrowser.showWebPage(Asset.Link2URL)
+			});
+	}
+	if (Asset.Link3Name) {
+		$('#actionList').append('<li><a href="#"><h3>'+ Asset.Link3Name+'</h3>' +'<p>' + Asset.Link3URL + '</p></a></li>').click(function(){
+		 	window.plugins.childBrowser.showWebPage(Asset.Link3URL)
+			});
+	}
+	if (Asset.Link4Name) {
+		$('#actionList').append('<li><a href="#"><h3>'+ Asset.Link4Name+'</h3>' +'<p>' + Asset.Link4URL + '</p></a></li>').click(function(){
+		 	window.plugins.childBrowser.showWebPage(Asset.Link4URL)
+			});
+	}
+	if (Asset.Link5Name) {
+		$('#actionList').append('<li><a href="#"><h3>'+ Asset.Link5Name+'</h3>' +'<p>' + Asset.Link5URL + '</p></a></li>').click(function(){
+		 	window.plugins.childBrowser.showWebPage(Asset.Link5URL)
+			});
+	}
+	if (Asset.Link6Name) {
+		$('#actionList').append('<li><a href="#"><h3>'+ Asset.Link6Name+'</h3>' +'<p>' + Asset.Link6URL + '</p></a></li>').click(function(){
+		 	window.plugins.childBrowser.showWebPage(Asset.Link6URL)
+			});
+	}
+	if (Asset.Link7Name) {
+		$('#actionList').append('<li><a href="#"><h3>'+ Asset.Link7Name+'</h3>' +'<p>' + Asset.Link7URL + '</p></a></li>').click(function(){
+		 	window.plugins.childBrowser.showWebPage(Asset.Link7URL)
+			});
+	}
+	if (Asset.Link8Name) {
+		$('#actionList').append('<li><a href="#"><h3>'+ Asset.Link8Name+'</h3>' +'<p>' + Asset.Link8URL + '</p></a></li>').click(function(){
+		 	window.plugins.childBrowser.showWebPage(Asset.Link8URL)
+			});
+	}
+	if (Asset.Link9Name) {
+		$('#actionList').append('<li><a href="#"><h3>'+ Asset.Link9Name+'</h3>' +'<p>' + Asset.Link9URL + '</p></a></li>').click(function(){
+		 	window.plugins.childBrowser.showWebPage(Asset.Link9URL)
+			});
+	}
+	if (Asset.Link10Name) {
+		$('#actionList').append('<li><a href="#"><h3>'+ Asset.Link10Name+'</h3>' +'<p>' + Asset.Link10URL + '</p></a></li>').click(function(){
+		 	window.plugins.childBrowser.showWebPage(Asset.Link10URL)
+			});
+	}
 	
 	
 	
