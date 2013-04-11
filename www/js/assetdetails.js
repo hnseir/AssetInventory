@@ -58,7 +58,7 @@ function Addlink(linkname,linkurl){
 				 { showNavigationBar: true, showLocationBar: true, showAddressBar: true });			 
 			}
 			else if (linkurl.indexOf("@")!=-1){
-				window.plugins.childBrowser.showWebPage('mailto:'+linkurl);
+				window.location.href = 'mailto:'+linkurl;
 			}
 		 	else{
 				window.plugins.childBrowser.showWebPage(linkurl, { showNavigationBar: true, showLocationBar: true, showAddressBar: true });
