@@ -15,12 +15,12 @@ function displayAssetDetails(data) {
 	
 
 	if (Asset.Link1Name) {
-		$('#actionList').append('<li id="link1"><a href="#"><h3>'+ Asset.Link1Name+'</h3>' +'<p>' + Asset.Link1URL + '</p></a></li>').click('#link1',function(){
+		$('#actionList').append('<li><a href="#"><h3>'+ Asset.Link1Name+'</h3>' +'<p>' + Asset.Link1URL + '</p></a></li>').find('a:last').click(function(){
 		 	window.plugins.childBrowser.showWebPage(Asset.Link1URL)
 			});
 	}
 	if (Asset.Link2Name) {
-		$('#actionList').append('<li  id="link2"><a href="#"><h3>'+ Asset.Link2Name+'</h3>' +'<p>' + Asset.Link2URL + '</p></a></li>').click('#link2', function(){
+		$('#actionList').append('<li><a href="#"><h3>'+ Asset.Link2Name+'</h3>' +'<p>' + Asset.Link2URL + '</p></a></li>').find('a:last').click(function(){
 		 	window.plugins.childBrowser.showWebPage(Asset.Link2URL)
 			});
 	}
