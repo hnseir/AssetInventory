@@ -2,6 +2,11 @@ var serviceURL = "http://10.1.2.85/AssetInventory/services/";
 
 var assets;
 
+$(document).ajaxError(function(){
+    alert('An error occured!');
+});
+
+
 $('#AssetListPage').bind('pageinit', function(event) {
     getAssetList();
 });

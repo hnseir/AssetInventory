@@ -1,4 +1,4 @@
-$('#detailsPage').live('pageshow', function(event) {
+$('#detailsPage').bind('pageshow', function(event) {
 	var id = getUrlVars()["id"];
 	$.getJSON(serviceURL + 'getassetdetails.php?id='+id, displayAssetDetails);
 });
@@ -6,12 +6,14 @@ $('#detailsPage').live('pageshow', function(event) {
 function displayAssetDetails(data) {
 	var Asset = data.item;
 	console.log(Asset);
+	$('#elementName').html( Asset.ElementCategory);
 	$('#projectname').html('Project Name: ' + Asset.ProjectName);
 	$('#levellayer').html('<b>Level:</b> ' + Asset.LevelLayer);
 	$('#elementcategory').html('<b>Category:</b> ' + Asset.ElementCategory);
 	$('#elementfamily').html('<b>Family:</b> ' + Asset.ElementFamily);
 	$('#elementtype').html('<b>Type:</b> ' + Asset.ElementType);
 	$('#elementid').html('<b>Element ID:</b> ' + Asset.ElementID);
+	
 	
 
 	if (Asset.Link1Name) {
