@@ -1,5 +1,4 @@
-//$('#detailsPage').bind('pageshow', function(event) {
-$(document).on('pageshow', '#detailsPage', function(event) {
+$('#detailsPage').live('pageshow', function(event) {
 	var id = getUrlVars()["id"];
 	$.getJSON(serviceURL + 'getassetdetails.php?id='+id, displayAssetDetails);
 });

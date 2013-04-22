@@ -11,9 +11,5 @@ version = "1.1.0">
   <author href="http://www.satpon.com" email="hnseir@satpon.com">
     Hussam Nseir
   </author>
-  <icon src="icon.png" />
-  <gap:splash src="splash.png" />
   <gap:plugin name="ChildBrowser" />
-  
-  
 </widget>
