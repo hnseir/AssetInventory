@@ -1673,14 +1673,14 @@
 				<treenode node="c;JS:JS Var Name;C:\xampp\htdocs\AssetInventory\www\js\jquery.mobile-1.0rc1.min.js;f171;155;172;155;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="getAssetList;JS:Function Name;C:\xampp\htdocs\AssetInventory\www\js\assetlist.js;f0;8;1;27;;;;vpos;;v;;r;;d24,8;;b0,0;;m">
-				<treenode node="asset;JS:JS Var Name;C:\xampp\htdocs\AssetInventory\www\js\assetlist.js;f34;20;39;20;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="getAssetList;JS:Function Name;C:\xampp\htdocs\AssetInventory\www\js\assetlist.js;f0;13;1;32;;;;vpos;;v;;r;;d24,13;;b0,0;;m">
+				<treenode node="asset;JS:JS Var Name;C:\xampp\htdocs\AssetInventory\www\js\assetlist.js;f34;25;39;25;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="assets;JS:JS Var Name;C:\xampp\htdocs\AssetInventory\www\js\assetlist.js;f2;11;8;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="assets;JS:JS Var Name;C:\xampp\htdocs\AssetInventory\www\js\assetlist.js;f2;16;8;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="data;JS:JS Var Name;C:\xampp\htdocs\AssetInventory\www\js\assetlist.js;f57;9;61;9;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="data;JS:JS Var Name;C:\xampp\htdocs\AssetInventory\www\js\assetlist.js;f57;14;61;14;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="serviceURL;JS:JS Var Name;C:\xampp\htdocs\AssetInventory\www\js\assetlist.js;f14;9;24;9;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="serviceURL;JS:JS Var Name;C:\xampp\htdocs\AssetInventory\www\js\assetlist.js;f14;14;24;14;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="getDocumentBase;JS:Function Name;C:\xampp\htdocs\AssetInventory\www\js\jquery.mobile-1.0rc1.min.js;f211;55;270;55;;;;vpos;;v;;r;;d238,55;;b0,0;;mb;;p">
@@ -2349,7 +2349,7 @@
 			</treenode>
 			<treenode node="disabled;JS:JS Var Name;C:\xampp\htdocs\AssetInventory\www\js\jquery.mobile-1.0rc1.min.js;f9;11;17;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
-			<treenode node="document;JS:JS Var Name;C:\xampp\htdocs\AssetInventory\www\js\jquery.mobile-1.0rc1.min.js;f136;26;144;26;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="document;JS:JS Var Name;C:\xampp\htdocs\AssetInventory\www\js\jquery.mobile-1.0rc1.min.js;f136;26;144;26;;C:\xampp\htdocs\AssetInventory\www\js\assetlist.js;f2;4;10;4;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="domain;JS:JS Var Name;C:\xampp\htdocs\AssetInventory\www\js\jquery.mobile-1.0rc1.min.js;f3;46;9;46;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -2659,7 +2659,7 @@
 	<filescache>
 		<file name="C:\xampp\htdocs\AssetInventory\www\js\jquery.mobile-1.0rc1.min.js" crc="-1002849082"/>
 		<file name="C:\xampp\htdocs\AssetInventory\www\js\jquery.js" crc="997990628"/>
-		<file name="C:\xampp\htdocs\AssetInventory\www\js\assetlist.js" crc="1412410747"/>
+		<file name="C:\xampp\htdocs\AssetInventory\www\js\assetlist.js" crc="-1246129315"/>
 		<file name="C:\xampp\htdocs\AssetInventory\www\js\assetdetails.js" crc="1095048363"/>
 		<file name="C:\xampp\htdocs\AssetInventory\www\css\styles.css" crc="-664516732"/>
 		<file name="C:\xampp\htdocs\AssetInventory\www\css\jquery.mobile-1.0rc1.min.css" crc="583587329"/>

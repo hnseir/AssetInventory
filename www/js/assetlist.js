@@ -6,7 +6,7 @@ $(document).ajaxError(function(){
     alert('An error occured!');
 });
 
-
+//$(document).on('pageshow', '#AssetListPage', function(event) {
 $('#AssetListPage').bind('pageinit', function(event) {
     getAssetList();
 });
